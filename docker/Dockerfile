@@ -1,4 +1,4 @@
-FROM python:3.9-windowsservercore-1809 
+FROM python:3.9
 
 LABEL maintainer="a.lee@student.tue.nl"
 
