@@ -5,8 +5,8 @@ LABEL maintainer="a.lee@student.tue.nl"
 RUN python -m pip install --upgrade pip
 RUN pip3 install OMSimulator --upgrade
 
-COPY twinops-s1/initiate_models.py /orchestration
-COPY twinops-s1/s1.ssp /orchestration
+COPY initiate_models.py /orchestration
+COPY s1.ssp /orchestration
 
 WORKDIR /orchestration  
 
