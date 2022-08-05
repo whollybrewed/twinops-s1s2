@@ -5,10 +5,9 @@ LABEL maintainer="a.lee@student.tue.nl"
 RUN python -m pip install --upgrade pip
 RUN pip3 install OMSimulator --upgrade
 
+WORKDIR /orchestration  
 COPY initiate_models.py /orchestration
 COPY s1.ssp /orchestration
-
-WORKDIR /orchestration  
 
 EXPOSE 9092
 
