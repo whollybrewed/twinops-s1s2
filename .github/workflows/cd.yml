@@ -1,4 +1,4 @@
-name: CI notify
+name: CD
 
 on:
   workflow_run:
