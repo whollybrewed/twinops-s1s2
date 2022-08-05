@@ -35,10 +35,9 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.REPO_NAME }}:latest
+      - uses: actions/checkout@v3
+      - name: Build the Docker image
+        run: docker build . --file "docker/Dockerfile" --tag ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.REPO_NAME }}:$(date +%s)
+      - name: Push the Docker image
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.REPO_NAME }}:$(date +%s)
           
