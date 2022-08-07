@@ -13,4 +13,4 @@ EXPOSE 9092
 
 ENTRYPOINT ["python"] 
 
-CMD ["initiate_models.py"]
+CMD ["init_models.py"]
