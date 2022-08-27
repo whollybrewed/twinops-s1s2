@@ -7,7 +7,7 @@ RUN pip3 install OMSimulator --upgrade
 
 WORKDIR /orchestration  
 COPY init_models.py /orchestration
-COPY s1.ssp /orchestration
+COPY s1s2.ssp /orchestration
 
 EXPOSE 9092
 
