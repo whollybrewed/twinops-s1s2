@@ -24,11 +24,11 @@ jobs:
     - name: Send control
       run: |
         python $(git ls-files 'run_control.py')
-    - name: Archive results
-      uses: actions/upload-artifact@v3
-      with:
-           name: orchestration-results
-           path: results.csv
+    # - name: Archive results
+    #  uses: actions/upload-artifact@v3
+    #  with:
+    #       name: orchestration-results
+    #       path: results.csv
 
   build-docker:
     needs: validation
